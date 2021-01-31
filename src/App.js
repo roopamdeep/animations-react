@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { easePolyOut } from "d3-ease";
 import Animate from "react-move/Animate";
 class App extends Component {
-  state = {};
+  state = { opacity: 1, fontSize: 100, rotate: 360 };
   onAnimate = () => (
     <Animate
       show={true}
@@ -26,7 +26,7 @@ class App extends Component {
               opacity: opacity,
               fontSize: fontSize,
               color: "teal",
-              rotate: rotate,
+              transform: `translate(0px,100px) rotateY(${rotate}deg)`,
             }}
           >
             Hello World!
